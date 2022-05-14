@@ -1,43 +1,24 @@
 package com.maktab74.Entity;
 
-public class ElectricalProducts {
-    private int id;
+public class ElectricalProducts extends Products {
     private String type;
     private String brand;
     private String model;
     private String description;
-    private String size;
     private String otherfeatures;
 
     public ElectricalProducts() {
     }
 
-    public ElectricalProducts(String type, String brand, String model, String description, String size, String otherfeatures) {
+    public ElectricalProducts(String type, String brand, String model, String description, String otherfeatures) {
         this.type = type;
         this.brand = brand;
         this.model = model;
         this.description = description;
-        this.size = size;
         this.otherfeatures = otherfeatures;
     }
 
-    public ElectricalProducts(int id, String type, String brand, String model, String description, String size, String otherfeatures) {
-        this.id = id;
-        this.type = type;
-        this.brand = brand;
-        this.model = model;
-        this.description = description;
-        this.size = size;
-        this.otherfeatures = otherfeatures;
-    }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getType() {
         return type;
@@ -71,19 +52,22 @@ public class ElectricalProducts {
         this.description = description;
     }
 
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
     public String getOtherfeatures() {
         return otherfeatures;
     }
 
     public void setOtherfeatures(String otherfeatures) {
         this.otherfeatures = otherfeatures;
+    }
+
+    @Override
+    public String toString() {
+        return "ElectricalProducts{" +
+                "type='" + type + '\'' +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", description='" + description + '\'' +
+                ", otherfeatures='" + otherfeatures + '\'' +
+                '}';
     }
 }
